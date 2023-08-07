@@ -1,0 +1,27 @@
+# 파일명 test.yaml
+version: "3.8"
+services:
+  db:
+    image: mariadb:10
+    container_name: mariadb
+    ports:
+      - "3306:3306"
+    # volumes:
+    # - ./db/conf.d:/etc/mysql/conf.d
+    # - ./db/data:/var/lib/mysql
+    # - ./db/initdb.d:/docker-entrypoint-initdb.d
+    # env_file: docker.env
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_USER_PASSWORD: password
+      TZ: Asia/Seoul
+      restart: always
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    expose:
+      - "3306"
+# 명령어 : docker-compose -f ./infra.yaml up -d
