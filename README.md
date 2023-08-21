@@ -24,3 +24,8 @@
 go mod init goweb
 docker-compose -f asset/go-web-infra/infra.yaml up -d
 ```
+
+
+## 인트로
+- 왜 고를 공부해야하나
+  - PPH 대비 서버 사용량 엄청 적음
