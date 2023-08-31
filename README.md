@@ -43,3 +43,26 @@ docker-compose -f asset/go-web-infra/infra.yaml up -d
 ```sh
 go mod init myapp
 ```
+
+
+## 8월31일 28번 강의부터
+
+- rkwl
+  - 고모듈 시작한거
+  - ??
+  - 템플릿 페이지 레이아웃 만든거임
+
+
+### 고랭컨벤션
+
+```
+/[모듈] 
+    /cmd
+      /web
+    /pkg
+      /handlers
+      /render
+```
+
+- 함수의 첫글자 : 소문자면 >> 프라이빗
+- 함수의 첫글자가 대문자 >> 퍼블릭 >> 비저블함
